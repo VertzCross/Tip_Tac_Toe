@@ -5,7 +5,7 @@ import { color, typography } from "../../theme"
  * All text will start off looking like this.
  */
 const BASE: TextStyle = {
-  fontFamily: typography.primary,
+  fontFamily: typography.code,
   color: color.text,
   fontSize: 15,
 }
@@ -16,33 +16,25 @@ const BASE: TextStyle = {
  * You want to customize these to whatever you need in your app.
  */
 export const presets = {
-  /**
-   * The default text styles.
-   */
   default: BASE,
-
-  /**
-   * A bold version of the default text.
-   */
+  primary: { ...BASE, color: color.palette.black } as TextStyle,
   bold: { ...BASE, fontWeight: "bold" } as TextStyle,
+  titleTip: {
+    ...BASE,
+    fontSize: 54,
+    fontWeight: "bold",
+    color: color.palette.angry,
+  } as TextStyle,
+  titleTac: { ...BASE, fontSize: 54, fontWeight: "bold", color: color.palette.purple } as TextStyle,
+  titleToe: {
+    ...BASE,
+    fontSize: 54,
+    fontWeight: "bold",
+    color: color.palette.lightBlue,
+  } as TextStyle,
 
-  /**
-   * Large headers.
-   */
-  header: { ...BASE, fontSize: 24, fontWeight: "bold" } as TextStyle,
-
-  /**
-   * Field labels that appear on forms above the inputs.
-   */
-  fieldLabel: { ...BASE, fontSize: 13, color: color.dim } as TextStyle,
-
-  /**
-   * A smaller piece of secondard information.
-   */
-  secondary: { ...BASE, fontSize: 9, color: color.dim } as TextStyle,
+  cell: { ...BASE, fontSize: 45, color: color.palette.black } as TextStyle,
+  alert: { ...BASE, fontSize: 45, color: color.palette.angry } as TextStyle,
 }
 
-/**
- * A list of preset names.
- */
 export type TextPresets = keyof typeof presets

@@ -1,17 +1,24 @@
 // For more info on how to write Detox tests, see the official docs:
 // https://github.com/wix/Detox/blob/master/docs/README.md
 
-describe("Example", () => {
+describe("Cheating Test E2E", () => {
   beforeEach(async () => {
     await device.reloadReactNative()
   })
 
-  it("should have welcome screen", async () => {
-    await expect(element(by.id("WelcomeScreen"))).toBeVisible()
-  })
-
-  it("should go to next screen after tap", async () => {
-    await element(by.id("next-screen-button")).tap()
-    await expect(element(by.id("DemoScreen"))).toBeVisible()
+  it("Play The Game", async () => {
+    await expect(element(by.id("MenuScreen"))).toBeVisible()
+    await expect(element(by.id("Cheating"))).toBeNotVisible()
+    await element(by.id("Cheating")).tap()
+    await expect(element(by.id("PlayScreen"))).toBeVisible()
+    await expect(element(by.id("StartCheating"))).toBeNotVisible()
+    await element(by.id("StartCheating")).tap()
+    await expect(element(by.id("StartCheating"))).toBeNotVisible()
+    await element(by.id("StartCheating")).tap()
+    await waitFor(element(by.text("It's a Tie!")))
+      .toBeVisible()
+      .whileElement(by.id("BestMove"))
+      .toBeNotVisible()
+      .tap()
   })
 })

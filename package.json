@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.11.0",
-    "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "^5.1.5",
     "apisauce": "1.1.2",
     "i18n-js": "^3.0.11",
@@ -43,6 +42,7 @@
     "react-native-gesture-handler": "^1.5.0",
     "react-native-keychain": "6.1.1",
     "react-native-localize": "^1.0.0",
+    "react-native-modal": "^12.1.0",
     "react-native-safe-area-context": "0.7.3",
     "react-native-safe-area-view": "1.1.1",
     "react-native-screens": "^2.10.1",
@@ -119,15 +119,15 @@
     "configurations": {
       "ios.sim.debug": {
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/TipTacToe.app",
-        "build": "xcodebuild -workspace ios/TipTacToe.xcworkspace -scheme TipTacToe -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "build": "xcodebuild -workspace ios/TipTacToe.xcworkspace -scheme TipTacToe -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=YES -destination 'platform=iOS Simulator,name=iPhone 11'",
         "type": "ios.simulator",
-        "name": "iPhone 8"
+        "name": "iPhone 11"
       },
       "ios.sim.release": {
         "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/TipTacToe.app",
         "build": "xcodebuild -workspace ios/TipTacToe.xcworkspace -scheme TipTacToe -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
         "type": "ios.simulator",
-        "name": "iPhone 8"
+        "name": "iPhone 11"
       }
     }
   },
