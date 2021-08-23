@@ -1,6 +1,8 @@
 # TipTacToe
 
-[![CircleCI](https://circleci.com/gh/infinitered/ignite-bowser.svg?style=svg)](https://circleci.com/gh/infinitered/ignite-bowser)
+[![TIPTACTOE1]](https://ik.imagekit.io/builderstest/Screen_Shot_2021-08-22_at_17.19.47_IPggHJPcQ.png?updatedAt=1629676830050)
+[![TIPTACTOE2]](https://ik.imagekit.io/builderstest/Screen_Shot_2021-08-22_at_17.20.12_l7beL0a4g.png?updatedAt=1629676830258)
+[![TIPTACTOEVIDEO]](https://ik.imagekit.io/builderstest/tiptactoevideo_QKol93WF7.gif?updatedAt=1629677730950)
 
 ## Description
 
@@ -17,6 +19,7 @@ Currently includes:
 - TypeScript
 - Detox
 - and more!!
+
 ## Project's Structure
 
 The project was started with Ignite Bowser boilerplate and this is the structure provided and keep it:
